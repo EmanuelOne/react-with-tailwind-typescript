@@ -37,8 +37,11 @@ export default function App() {
   }, 0);
 
   return (
-    <div>
+    <div style={{ height: '297px', width: '100%' }}>
       <Line
+        style={{ width: '100%', height: '100%' }}
+        height={297}
+        // className="w-full h-[297px]"
         data={{
           labels: [
             'January',
@@ -67,6 +70,8 @@ export default function App() {
         }}
         options={{
           layout: {},
+          maintainAspectRatio: false,
+          // responsive: false,
           plugins: {
             legend: {
               display: false,
