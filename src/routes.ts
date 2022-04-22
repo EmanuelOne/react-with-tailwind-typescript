@@ -1,3 +1,4 @@
+import Chart from './pages/chart';
 import Login from './pages/login';
 import Register from './pages/register';
 export const routers = [
@@ -8,5 +9,9 @@ export const routers = [
   {
     path: '/register',
     component: Register,
+  },
+  {
+    path: '/chart',
+    component: Chart,
   },
 ];

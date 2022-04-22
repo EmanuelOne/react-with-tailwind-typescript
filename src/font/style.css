@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'BR Firma';
+    src: local('BR Firma SemiBold'), local('BR-Firma-SemiBold'),
+        url('BRFirma-SemiBold.woff2') format('woff2'),
+        url('BRFirma-SemiBold.woff') format('woff'),
+        url('BRFirma-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }

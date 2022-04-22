@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChartJs</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"
+      integrity="sha512-ttHne44lbbucAUVjyStgbDTTqvNVQdIGN9gqZeai69i4OXSDNjlBd1tyCVXI/a/DqITpj9gXi84dcyG2vz4jhw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css"
+      integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <canvas id="myChart"></canvas>
+    </div>
+    <script>
+      let myChart = document.getElementById('myChart').getContext('2d');
+      let massPopChart = new Chart(myChart, {
+        type: 'line', //bar,horizontalBar,pie,line,doughnut,radar,polarArea
+        data: {
+          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          datasets: [
+            {
+              label: 'Population',
+              data: [34489745, 34567898, 43245903, 9605444, 34747422, 34567898],
+              backgroundColor: [
+                'rgba(255, 99, 132, 0.6)',
+                'rgba(54, 162, 235, 0.6)',
+                'rgba(255, 206, 86, 0.6)',
+                'rgba(75, 192, 192, 0.6)',
+                'rgba(153, 102, 255, 0.6)',
+                'rgba(255, 159, 64, 0.6)',
+              ],
+              borderWidth: 1,
+              borderColor: '#777',
+              hoverBorderWidth: 3,
+              hoverBorderColor: '#000',
+              //   fill: {
+              //     target: 'origin',
+              //     above: 'rgb(255, 0, 0)', // Area will be red above the origin
+              //     below: 'rgb(0, 0, 255)', // And blue below the origin
+              //   },
+            },
+          ],
+        },
+        options: {
+          title: {
+            display: true,
+            text: 'Largest Cities In Massachusetts',
+            fontSize: 25,
+          },
+          legend: {
+            display: false,
+            position: 'right',
+            labels: {
+              fontColor: '#000',
+            },
+          },
+          layout: {
+            padding: {
+              left: 0,
+              right: 0,
+              bottom: 0,
+              top: 0,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
